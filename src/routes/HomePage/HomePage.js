@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import RoutinesApiService from '../../services/routines-api-service';
+// import RoutinesApiService from '../../services/routines-api-service';
 
 export default function HomePage(props) {
     // const [routines, setRoutines] = useState([]);
