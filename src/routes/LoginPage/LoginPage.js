@@ -1,14 +1,30 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './LoginPage.css'
+import TokenService from '../../services/token-service';
+import AuthApiService from '../../services/auth-api-service';
+import './LoginPage.css';
 
 export default function LoginPage(props) {
     const [error, setError] = useState(null);
 
     function handleSubmitJwtAuth(e) {
         e.preventDefault();
+        setError(null);
         const { user_name, password } = e.target;
-        console.log(user_name.value, password.value);
+
+        AuthApiService.postLogin({
+            user_name: user_name.value,
+            password: password.value
+        })
+            .then(res => {
+                user_name.value = '';
+                password.value = '';
+                TokenService.saveAuthToken(res.authToken);
+                this.props.onLoginSuccess();
+            })
+            .catch(res => {
+                setError({ error: res.error })
+            })
     }
 
     return (
