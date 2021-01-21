@@ -7,6 +7,7 @@ import OpeningPage from './routes/OpeningPage/OpeningPage';
 import LoginPage from './routes/LoginPage/LoginPage';
 import HomePage from './routes/HomePage/HomePage'
 import PrivateRoute from './utils/PrivateRoute';
+import PublicOnlyRoute from './utils/PublicOnlyRoute';
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
       </header>
       <main>
         <Switch>
-          <Route
+          <PublicOnlyRoute
             exact path={'/'}
             component={OpeningPage}
           />
-          <Route
+          <PublicOnlyRoute
             path={'/login'}
             component={LoginPage} />
           <PrivateRoute
