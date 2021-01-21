@@ -1,19 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import RoutinesApiService from '../../services/routines-api-service';
 
 export default function HomePage(props) {
     // const [routines, setRoutines] = useState([]);
-
-    // const fetchRoutines = useCallback(() => {
+    // useEffect(() => {
     //     RoutinesApiService.getAllRoutines()
-    //     .then(res =>{
-    //         setRoutines(res)
-    //     })
-    //     .catch((err) =>{
-    //         console.log(err);
-    //     })
-    // })
+    //         .then(res => {
+    //             setRoutines(res);
+    //         })
+    // }, []);
 
     return (
         <div className='HomePage'>

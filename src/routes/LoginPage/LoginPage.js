@@ -30,6 +30,7 @@ export default function LoginPage(props) {
             })
             .catch(res => {
                 setError({ error: res.error })
+                alert(error);
             })
     }
 
