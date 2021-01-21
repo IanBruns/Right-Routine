@@ -13,19 +13,21 @@ export default function HomePage(props) {
             <div className='home-options'>
                 <div className='box'>
                     <p>Add Exercise</p>
-                    <Link to='/home/add-workout'>
+                    <Link to='/add-workout'>
                         <button className='myButton'>Add</button>
                     </Link>
                 </div>
                 <div className='box'>
                     <p>Generate Workout</p>
-                    <button className='myButton'>
-                        Generate
-                    </button>
+                    <Link to='/generate-workout'>
+                        <button className='myButton'>Generate</button>
+                    </Link>
                 </div>
                 <div className='box'>
-                    <p>Add Workout Category</p>
-                    <button className='myButton'>Add</button>
+                    <p>Add Exercise Routine</p>
+                    <Link to='/add-routine'>
+                        <button className='myButton'>Add</button>
+                    </Link>
                 </div>
             </div>
         </div>
