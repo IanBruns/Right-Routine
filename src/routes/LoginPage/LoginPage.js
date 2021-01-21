@@ -20,7 +20,7 @@ export default function LoginPage(props) {
                 user_name.value = '';
                 password.value = '';
                 TokenService.saveAuthToken(res.authToken);
-                this.props.onLoginSuccess();
+                props.onLoginSuccess();
             })
             .catch(res => {
                 setError({ error: res.error })
