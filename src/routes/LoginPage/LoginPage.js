@@ -7,17 +7,17 @@ export default function LoginPage(props) {
             <h2>Sign in</h2>
             <form className='sign-in-form'>
                 <div className='form-options'>
-                    <label for='uname'>Username</label>
+                    <label htmlFor='uname'>Username</label>
                     <br />
                     <input type='text' placeholder='enter Username' name='uname' required />
                 </div>
-                <div class='form-options'>
-                    <label for="psw">Password</label>
+                <div className='form-options'>
+                    <label htmlFor="psw">Password</label>
                     <br />
                     <input type="password" placeholder="Enter Password" name="psw" required />
                 </div>
                 <br />
-                <button type="submit" class='myButton'>Log in</button>
+                <button type="submit" className='myButton'>Log in</button>
                 <br />
             </form>
             <p>
