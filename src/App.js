@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage';
-import OpeningPage from './routes/OpeningPage/OpeningPage'
+import OpeningPage from './routes/OpeningPage/OpeningPage';
+import LoginPage from './routes/LoginPage/LoginPage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
             exact path={'/'}
             component={OpeningPage}
           />
+          <Route
+            path={'/login'}
+            component={LoginPage} />
           <Route
             component={NotFoundPage}
           />
