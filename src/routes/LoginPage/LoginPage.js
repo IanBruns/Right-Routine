@@ -7,6 +7,12 @@ import './LoginPage.css';
 export default function LoginPage(props) {
     const [error, setError] = useState(null);
 
+    function onLoginSuccess() {
+        const { location, history } = props;
+        const destination = (location.state || {}).from || '/home';
+        history.push(destination);
+    }
+
     function handleSubmitJwtAuth(e) {
         e.preventDefault();
         setError(null);
@@ -20,7 +26,7 @@ export default function LoginPage(props) {
                 user_name.value = '';
                 password.value = '';
                 TokenService.saveAuthToken(res.authToken);
-                props.onLoginSuccess();
+                onLoginSuccess();
             })
             .catch(res => {
                 setError({ error: res.error })

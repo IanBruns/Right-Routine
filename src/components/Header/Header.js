@@ -14,7 +14,7 @@ function Header(props) {
                     onClick={handleLogoutClick()}
                     to='/'>
                     Logout
-        </Link>
+                </Link>
             </div>
         )
     }
@@ -36,7 +36,9 @@ function Header(props) {
 
     return (
         <nav className='Header'>
-            <h1>Right Routine</h1>
+            <Link to='/'>
+                <h1>Right Routine</h1>
+            </Link>
             {TokenService.hasAuthToken()
                 ? renderLogoutLink()
                 : renderLoginLink()}

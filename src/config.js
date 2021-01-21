@@ -1,5 +1,5 @@
 const config = {
-    API_ENDPOINT: 'http://localhost:8000/api',
+    API_ENDPOINT: 'https://desolate-castle-20789.herokuapp.com/api',
     TOKEN_KEY: 'right-routine-client-auth-token',
 }
 

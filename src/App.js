@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage';
 import OpeningPage from './routes/OpeningPage/OpeningPage';
 import LoginPage from './routes/LoginPage/LoginPage';
+import HomePage from './routes/HomePage/HomePage'
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
           <Route
             path={'/login'}
             component={LoginPage} />
+          <Route
+            path={'/home'}
+            component={HomePage}
+          />
           <Route
             component={NotFoundPage}
           />
