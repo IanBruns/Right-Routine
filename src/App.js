@@ -6,6 +6,7 @@ import NotFoundPage from './routes/NotFoundPage/NotFoundPage';
 import OpeningPage from './routes/OpeningPage/OpeningPage';
 import LoginPage from './routes/LoginPage/LoginPage';
 import HomePage from './routes/HomePage/HomePage'
+import PrivateRoute from './utils/PrivateRoute';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route
             path={'/login'}
             component={LoginPage} />
-          <Route
+          <PrivateRoute
             path={'/home'}
             component={HomePage}
           />
