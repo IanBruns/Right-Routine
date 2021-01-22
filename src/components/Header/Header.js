@@ -11,7 +11,7 @@ function Header(props) {
         return (
             <div className='Header__logged-in'>
                 <Link
-                    onClick={handleLogoutClick()}
+                    onClick={handleLogoutClick}
                     to='/'>
                     Logout
                 </Link>

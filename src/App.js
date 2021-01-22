@@ -42,9 +42,9 @@ function App() {
             component={HomePage}
           />
           <PrivateRoute
-            path={'addExercise'}
+            path={'/add-workout'}
             component={AddExercisePage}
-            propName={routines}
+            routines={routines}
           />
           <Route
             component={NotFoundPage}
