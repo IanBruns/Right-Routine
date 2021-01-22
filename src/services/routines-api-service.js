@@ -56,6 +56,23 @@ const RoutinesApiService = {
                     : res.json()
             )
     },
+    postNewRoutine(routine_name) {
+        return fetch(`${config.API_ENDPOINT}/routines`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
+            body: JSON.stringify({
+                routine_name,
+            }),
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    }
 }
 
 export default RoutinesApiService;
