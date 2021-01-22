@@ -13,7 +13,6 @@ import TokenService from './services/token-service';
 
 function App() {
   const [routines, setRoutines] = useState([]);
-
   useEffect(() => {
     if (TokenService.hasAuthToken()) {
       RoutinesApiService.getAllRoutines()
@@ -40,6 +39,10 @@ function App() {
           <PrivateRoute
             path={'/home'}
             component={HomePage}
+          />
+          <PrivateRoute
+            path={'addExercise'}
+            componenet={AddExercisePage}
           />
           <Route
             component={NotFoundPage}
