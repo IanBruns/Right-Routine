@@ -10,6 +10,7 @@ import HomePage from './routes/HomePage/HomePage'
 import PrivateRoute from './utils/PrivateRoute';
 import PublicOnlyRoute from './utils/PublicOnlyRoute';
 import TokenService from './services/token-service';
+import AddExercisePage from './routes/AddExercisePage/AddExercisePage';
 
 function App() {
   const [routines, setRoutines] = useState([]);
@@ -42,7 +43,8 @@ function App() {
           />
           <PrivateRoute
             path={'addExercise'}
-            componenet={AddExercisePage}
+            component={AddExercisePage}
+            propName={routines}
           />
           <Route
             component={NotFoundPage}
