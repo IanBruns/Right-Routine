@@ -11,6 +11,7 @@ import PrivateRoute from './utils/PrivateRoute';
 import PublicOnlyRoute from './utils/PublicOnlyRoute';
 import TokenService from './services/token-service';
 import AddExercisePage from './routes/AddExercisePage/AddExercisePage';
+import GenerateWorkoutsPage from './routes/GenerateWorkoutsPage/GenerateWorkoutsPage';
 
 function App() {
   const [routines, setRoutines] = useState([]);
@@ -44,6 +45,11 @@ function App() {
           <PrivateRoute
             path={'/add-workout'}
             component={AddExercisePage}
+            routines={routines}
+          />
+          <PrivateRoute
+            path={'/generate-workout'}
+            component={GenerateWorkoutsPage}
             routines={routines}
           />
           <Route

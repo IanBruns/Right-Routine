@@ -7,12 +7,6 @@ export default function AddExercisePage(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        const testObject = {
-            exercise_name,
-            exercise_description,
-            assigned_routine,
-        };
-        console.log(testObject);
     }
 
     const routineOptions = props.routines.map((mapRoutine, i) => {
