@@ -13,6 +13,7 @@ import TokenService from './services/token-service';
 import AddExercisePage from './routes/AddExercisePage/AddExercisePage';
 import GenerateWorkoutsPage from './routes/GenerateWorkoutsPage/GenerateWorkoutsPage';
 import AssignedWorkoutPage from './routes/AssignedWorkoutPage/AssignedWorkoutPage';
+import AddRoutinesPage from './routes/AddRoutinesPage/AddRoutinesPage';
 
 function App() {
   const [routines, setRoutines] = useState([]);
@@ -47,6 +48,10 @@ function App() {
             path={'/add-workout'}
             component={AddExercisePage}
             routines={routines}
+          />
+          <PrivateRoute
+            path={'/add-routine'}
+            component={AddRoutinesPage}
           />
           <PrivateRoute
             path={'/generate-workout'}
