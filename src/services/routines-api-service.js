@@ -39,7 +39,7 @@ const RoutinesApiService = {
             )
     },
     postNewExercise(exercise_name, exercise_description, assigned_routine) {
-        return fetch(`${config.API_ENDPOINT}/routines`, {
+        return fetch(`${config.API_ENDPOINT}/routines/${assigned_routine}/exercises`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -48,7 +48,6 @@ const RoutinesApiService = {
             body: JSON.stringify({
                 exercise_name,
                 exercise_description,
-                assigned_routine,
             }),
         })
             .then(res =>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import RoutinesApiService from '../../services/routines-api-service';
 
 export default function AddExercisePage(props) {
     const [exercise_name, setExercise_name] = useState('');
@@ -7,6 +8,16 @@ export default function AddExercisePage(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        RoutinesApiService.postNewExercise(exercise_name, exercise_description, assigned_routine)
+            .then(() => {
+                setExercise_name('');
+                setExercise_description('');
+                setAssigned_routine('');
+                props.history.goBack();
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     const routineOptions = props.routines.map((mapRoutine, i) => {
