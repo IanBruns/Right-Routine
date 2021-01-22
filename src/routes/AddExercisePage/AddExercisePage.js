@@ -5,6 +5,11 @@ export default function AddExercisePage(props) {
     const [exercise_description, setExercise_description] = useState('');
     const [assigned_exercise, setAssigned_exercise] = useState('');
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log('Submit!');
+    }
+
     const routineOptions = props.routines.map((mapRoutine, i) => {
         return <option key={i} value={mapRoutine.id}>{mapRoutine.routine_name}</option>
     })
@@ -14,7 +19,7 @@ export default function AddExercisePage(props) {
 
             <h2>Add an Exercise</h2>
 
-            <form className='add-exercise-form'>
+            <form className='add-exercise-form' onSubmit={e => handleSubmit(e)}>
 
                 <div className='form-options'>
                     <label htmlFor='exercise_name'>Exercise Name</label>
@@ -40,7 +45,11 @@ export default function AddExercisePage(props) {
                     </select>
                 </div>
 
-                <button className='myButton' type='submit'>
+                <button className='myButton' type='submit'
+                    disabled={
+                        !(exercise_name.length > 0) ||
+                        !(assigned_exercise.length > 0)
+                    }>
                     Submit
                 </button>
 
