@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function GenerateWorkoutsPage(props) {
     const selectExercise = props.routines.map((mapRoutine, i) => {
@@ -6,9 +7,12 @@ export default function GenerateWorkoutsPage(props) {
             <div className='box' key={i}>
                 {mapRoutine.routine_name}
                 <br />
-                <button className='myButton'>
-                    Select
+
+                <Link to={`/workout/${mapRoutine.id}`}>
+                    <button className='myButton'>
+                        Select
                 </button>
+                </Link>
             </div>
         )
     });
