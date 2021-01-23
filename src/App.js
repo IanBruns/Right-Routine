@@ -14,6 +14,7 @@ import AddExercisePage from './routes/AddExercisePage/AddExercisePage';
 import GenerateWorkoutsPage from './routes/GenerateWorkoutsPage/GenerateWorkoutsPage';
 import AssignedWorkoutPage from './routes/AssignedWorkoutPage/AssignedWorkoutPage';
 import AddRoutinesPage from './routes/AddRoutinesPage/AddRoutinesPage';
+import RegistrationPage from './routes/RegistrationPage/RegistrationPage';
 
 function App() {
   const [routines, setRoutines] = useState([]);
@@ -40,6 +41,10 @@ function App() {
           <PublicOnlyRoute
             path={'/login'}
             component={LoginPage} />
+          <PublicOnlyRoute
+            path={'/register'}
+            component={RegistrationPage}
+          />
           <PrivateRoute
             path={'/home'}
             component={HomePage}
