@@ -5,12 +5,17 @@ export default function RegistrationPage(props) {
     const [user_name, setUser_name] = useState('');
     const [password, setPassword] = useState('');
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log('click');
+    }
+
     return (
         <div className='sign-up'>
 
             <h2>Register</h2>
 
-            <form className='sign-up-form'>
+            <form className='sign-up-form' onSubmit={e => handleSubmit(e)}>
 
                 <div className='form-options'>
                     <label htmlFor='user_name'>Username</label>
