@@ -8,14 +8,14 @@ export default function RegistrationPage(props) {
     return (
         <div className='sign-up'>
 
-            <h2>Sign Up</h2>
+            <h2>Register</h2>
 
             <form className='sign-up-form'>
 
                 <div className='form-options'>
                     <label htmlFor='user_name'>Username</label>
                     <br />
-                    <input type='text' placeholder='enter Username' name='user_name' required
+                    <input type='text' placeholder='Enter Username' name='user_name' required
                         value={user_name} onChange={e => setUser_name(e.target.value)} />
                 </div>
 
