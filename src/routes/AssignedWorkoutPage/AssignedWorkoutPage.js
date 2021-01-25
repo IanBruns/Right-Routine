@@ -4,6 +4,7 @@ import RoutinesApiService from '../../services/routines-api-service';
 import './AssignedWorkoutPage.css'
 
 export default function AssignedWorkoutPage(props) {
+    const [totalExercises, setTotalExercises] = useState(4);
     const [exercises, setExercises] = useState([]);
     useEffect(() => {
         RoutinesApiService.getRoutineExercises(props.match.params.routine_id)
@@ -30,10 +31,11 @@ export default function AssignedWorkoutPage(props) {
     return (
         <div className='AssignedWorkoutPage'>
             <h2>Today's workout</h2>
-            <button className='myButton'>
+            <button className='myButton'
+                onClick={() => setTotalExercises(totalExercises + 1)}>
                 Add Another
             </button>
-            {generateAssignedExercises(4)}
+            {generateAssignedExercises(totalExercises)}
         </div>
     )
 }
