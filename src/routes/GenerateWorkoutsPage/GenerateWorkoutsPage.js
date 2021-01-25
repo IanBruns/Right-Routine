@@ -16,9 +16,12 @@ export default function GenerateWorkoutsPage(props) {
                 <br />
                 <Link to={`/manage/${mapRoutine.id}`}>
                     <button className='myButton'>
-                        Manage
+                        Manage Exercises
                 </button>
                 </Link>
+                <button className='myButton'>
+                    Delete Routine
+                </button>
             </div>
         )
     });
