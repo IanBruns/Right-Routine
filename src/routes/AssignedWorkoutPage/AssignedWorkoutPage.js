@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Exercise from '../../components/Exercise/Exercise';
 import RoutinesApiService from '../../services/routines-api-service';
 import './AssignedWorkoutPage.css'
 
@@ -11,25 +12,28 @@ export default function AssignedWorkoutPage(props) {
             })
     }, [props.match.params.routine_id])
 
-    let numberOfExercises = 4;
-
     const exercisesCopy = exercises.map((exercise, i) => {
         return (
-            <div className="exercise" key={i}>
-                <div className='exercise-text'>
-                    <p>{exercise.exercise_name}</p>
-                    <p>{exercise.exercise_description}</p>
-                </div>
-            </div>
+            <Exercise
+                key={i}
+                name={exercise.exercise_name}
+                description={exercise.exercise_description}
+            />
         )
     })
 
-    const todaysWorkout = exercisesCopy.slice(0, numberOfExercises);
+    function generateAssignedExercises(numberOfExercises) {
+        const todaysWorkout = exercisesCopy.slice(0, numberOfExercises);
+        return todaysWorkout;
+    }
 
     return (
         <>
             <h2>Today's workout</h2>
-            {todaysWorkout}
+            <button className='myButton'>
+                Add Another
+            </button>
+            {generateAssignedExercises(4)}
         </>
     )
 }
