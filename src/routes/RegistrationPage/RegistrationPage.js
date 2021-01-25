@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import AuthApiService from '../../services/auth-api-service';
 
 export default function RegistrationPage(props) {
     const [user_name, setUser_name] = useState('');
@@ -7,7 +8,15 @@ export default function RegistrationPage(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log('click');
+
+        AuthApiService.postUser({ user_name, password })
+            .then(() => {
+                setUser_name('');
+                setPassword('');
+            })
+            .catch(err => {
+                alert(err.error);
+            })
     }
 
     return (
