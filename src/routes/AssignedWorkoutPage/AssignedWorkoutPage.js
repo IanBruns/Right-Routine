@@ -28,12 +28,12 @@ export default function AssignedWorkoutPage(props) {
     }
 
     return (
-        <>
+        <div className='AssignedWorkoutPage'>
             <h2>Today's workout</h2>
             <button className='myButton'>
                 Add Another
             </button>
             {generateAssignedExercises(4)}
-        </>
+        </div>
     )
 }
