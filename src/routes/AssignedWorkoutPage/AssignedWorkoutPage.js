@@ -11,7 +11,9 @@ export default function AssignedWorkoutPage(props) {
             })
     }, [props.match.params.routine_id])
 
-    const todaysWorkout = exercises.map((exercise, i) => {
+    let numberOfExercises = 4;
+
+    const exercisesCopy = exercises.map((exercise, i) => {
         return (
             <div className="exercise" key={i}>
                 <div className='exercise-text'>
@@ -21,6 +23,8 @@ export default function AssignedWorkoutPage(props) {
             </div>
         )
     })
+
+    const todaysWorkout = exercisesCopy.slice(0, numberOfExercises);
 
     return (
         <>
