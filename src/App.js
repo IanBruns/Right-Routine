@@ -37,6 +37,10 @@ function App() {
     setIsLoggedIn(false);
   }
 
+  function addRoutine(newRoutine) {
+    setRoutines(routines.push(newRoutine))
+  }
+
   return (
     <div className="App">
       <header>
@@ -70,6 +74,7 @@ function App() {
           <PrivateRoute
             path={'/add-routine'}
             component={AddRoutinesPage}
+            addRoutine={addRoutine}
           />
           <PrivateRoute
             path={'/generate-workout'}

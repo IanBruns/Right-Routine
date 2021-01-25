@@ -17,7 +17,6 @@ export default function AssignedWorkoutPage(props) {
                     <p>{exercise.exercise_name}</p>
                     <p>{exercise.exercise_description}</p>
                 </div>
-                <button className="myButton">Re-Roll</button>
             </div>
         )
     })
