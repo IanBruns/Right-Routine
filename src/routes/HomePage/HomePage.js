@@ -7,10 +7,13 @@ export default function HomePage(props) {
             <h2>Hello, what would you like to do?</h2>
             <div className='home-options'>
                 <div className='box'>
-                    <p>Add Exercise</p>
-                    <Link to='/add-workout'>
-                        <button className='myButton'>Add</button>
-                    </Link>
+                    <p>How to</p>
+                    <p>
+                        First add a routine or two, then assign some workouts to it
+                        (shoot for at least 5 exercises for a routine).  From there you
+                        can generate a workout where it will randomize and select 4
+                        exercises for you
+                    </p>
                 </div>
                 <div className='box'>
                     <p>Generate Workout</p>
@@ -21,6 +24,12 @@ export default function HomePage(props) {
                 <div className='box'>
                     <p>Add Exercise Routine</p>
                     <Link to='/add-routine'>
+                        <button className='myButton'>Add</button>
+                    </Link>
+                </div>
+                <div className='box'>
+                    <p>Add Exercise</p>
+                    <Link to='/add-workout'>
                         <button className='myButton'>Add</button>
                     </Link>
                 </div>
