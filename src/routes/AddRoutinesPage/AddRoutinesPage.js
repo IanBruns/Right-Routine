@@ -8,7 +8,8 @@ export default function AddRoutinesPage(props) {
         e.preventDefault();
 
         RoutinesApiService.postNewRoutine(routine_name)
-            .then(() => {
+            .then(data => {
+                props.addRoutine(data)
                 setRoutine_name('');
                 props.history.goBack();
             })

@@ -38,7 +38,10 @@ function App() {
   }
 
   function addRoutine(newRoutine) {
-    setRoutines(routines.push(newRoutine))
+    const addRoutines = routines;
+    addRoutines.push(newRoutine);
+
+    setRoutines(addRoutines);
   }
 
   return (

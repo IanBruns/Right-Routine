@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import RoutinesApiService from '../../services/routines-api-service';
+import './AssignedWorkoutPage.css'
 
 export default function AssignedWorkoutPage(props) {
     const [exercises, setExercises] = useState([]);
