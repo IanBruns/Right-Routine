@@ -17,6 +17,8 @@ import AddRoutinesPage from './routes/AddRoutinesPage/AddRoutinesPage';
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [routines, setRoutines] = useState([]);
   useEffect(() => {
     if (TokenService.hasAuthToken()) {
@@ -25,12 +27,21 @@ function App() {
           setRoutines(res);
         })
     }
-  }, []);
+  }, [isLoggedIn]);
+
+  function whenLoggedIn() {
+    setIsLoggedIn(true);
+  }
+
+  function whenLoggedOut() {
+    setIsLoggedIn(false);
+  }
 
   return (
     <div className="App">
       <header>
-        <Header />
+        <Header
+          whenLoggedOut={whenLoggedOut} />
       </header>
       <main>
         <Switch>
@@ -40,7 +51,9 @@ function App() {
           />
           <PublicOnlyRoute
             path={'/login'}
-            component={LoginPage} />
+            component={LoginPage}
+            whenLoggedIn={whenLoggedIn}
+          />
           <PublicOnlyRoute
             path={'/register'}
             component={RegistrationPage}

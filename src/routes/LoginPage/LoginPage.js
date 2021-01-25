@@ -8,6 +8,8 @@ export default function LoginPage(props) {
     const [error, setError] = useState(null);
 
     function onLoginSuccess() {
+        props.whenLoggedIn();
+
         const { location, history } = props;
         const destination = (location.state || {}).from || '/home';
         history.push(destination);

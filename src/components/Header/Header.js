@@ -5,6 +5,7 @@ import TokenService from '../../services/token-service';
 function Header(props) {
     function handleLogoutClick() {
         TokenService.clearAuthToken();
+        props.whenLoggedOut();
     }
 
     function renderLogoutLink() {

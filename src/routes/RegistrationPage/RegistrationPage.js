@@ -13,6 +13,10 @@ export default function RegistrationPage(props) {
             .then(() => {
                 setUser_name('');
                 setPassword('');
+
+                const { location, history } = props;
+                const destination = (location.state || {}).from || '/login';
+                history.push(destination);
             })
             .catch(err => {
                 alert(err.error);
