@@ -15,6 +15,7 @@ import GenerateWorkoutsPage from './routes/GenerateWorkoutsPage/GenerateWorkouts
 import AssignedWorkoutPage from './routes/AssignedWorkoutPage/AssignedWorkoutPage';
 import AddRoutinesPage from './routes/AddRoutinesPage/AddRoutinesPage';
 import RegistrationPage from './routes/RegistrationPage/RegistrationPage';
+import ManageRoutesExercisesPage from './routes/ManageRoutesExercisesPage/ManageRoutesExercisesPage';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -87,6 +88,10 @@ function App() {
           <PrivateRoute
             path={'/workout/:routine_id'}
             component={AssignedWorkoutPage}
+          />
+          <PrivateRoute
+            path={'/manage/:routine_id'}
+            component={ManageRoutesExercisesPage}
           />
           <Route
             component={NotFoundPage}

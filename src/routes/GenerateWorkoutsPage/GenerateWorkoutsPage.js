@@ -13,6 +13,12 @@ export default function GenerateWorkoutsPage(props) {
                         Select
                 </button>
                 </Link>
+                <br />
+                <Link to={`/manage/${mapRoutine.id}`}>
+                    <button className='myButton'>
+                        Manage
+                </button>
+                </Link>
             </div>
         )
     });
