@@ -20,8 +20,8 @@ export default function AddExercisePage(props) {
             })
     }
 
-    const routineOptions = props.routines.map((mapRoutine, i) => {
-        return <option key={i} value={mapRoutine.id}>{mapRoutine.routine_name}</option>
+    const routineOptions = props.routines.map((mapRoutine) => {
+        return <option key={mapRoutine.id} value={mapRoutine.id}>{mapRoutine.routine_name}</option>
     })
 
     return (

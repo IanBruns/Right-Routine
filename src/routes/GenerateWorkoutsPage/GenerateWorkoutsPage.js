@@ -7,13 +7,9 @@ export default function GenerateWorkoutsPage(props) {
             <Options key={mapRoutine.id}
                 id={mapRoutine.id}
                 name={mapRoutine.routine_name}
-                removeRoutine={removeRoutine} />
+                removeRoutine={props.removeRoutine} />
         )
     });
-
-    function removeRoutine(id) {
-        console.log('test');
-    }
 
     return (
         <div className='GenerateWorkoutsPage'>

@@ -23,9 +23,9 @@ export default function ManageRoutesExercisesPage(props) {
             })
     }
 
-    let manageExercises = exercises.map((mapExercise, i) => {
+    let manageExercises = exercises.map((mapExercise) => {
         return (
-            <div className='manage-routine' key={i}>
+            <div className='manage-routine' key={mapExercise.id}>
                 <p>{mapExercise.exercise_name}</p>
                 <button
                     onClick={() => handleDeleteClicked(mapExercise.id)}>

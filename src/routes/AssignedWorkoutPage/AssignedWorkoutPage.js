@@ -13,10 +13,10 @@ export default function AssignedWorkoutPage(props) {
             })
     }, [props.match.params.routine_id])
 
-    const exercisesCopy = exercises.map((exercise, i) => {
+    const exercisesCopy = exercises.map((exercise) => {
         return (
             <Exercise
-                key={i}
+                key={exercise.id}
                 name={exercise.exercise_name}
                 description={exercise.exercise_description}
             />

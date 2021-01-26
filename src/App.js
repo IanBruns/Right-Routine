@@ -45,6 +45,10 @@ function App() {
     setRoutines(addRoutines);
   }
 
+  function removeRoutine(id) {
+    console.log(id);
+  }
+
   return (
     <div className="App">
       <header>
@@ -84,6 +88,7 @@ function App() {
             path={'/generate-workout'}
             component={GenerateWorkoutsPage}
             routines={routines}
+            removeRoutine={removeRoutine}
           />
           <PrivateRoute
             path={'/workout/:routine_id'}
