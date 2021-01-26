@@ -46,7 +46,16 @@ function App() {
   }
 
   function removeRoutine(routine_id) {
-    console.log(routine_id);
+    const newRoutines = routines.filter(routine =>
+      routine.id !== routine_id)
+
+    RoutinesApiService.deleteRoutine(routine_id)
+      .then(() => {
+        setRoutines(newRoutines)
+      })
+      .catch(err => {
+        console.log(err);
+      })
   }
 
   return (
