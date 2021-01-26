@@ -8,9 +8,20 @@ export default function ManageRoutesExercisesPage(props) {
             .then(res => {
                 setExercises(res);
             })
-    }, [props.match.params.routine_id])
+    }, [props.match.params.routine_id]);
+
+    const manageExercises = exercises.map((mapExercise, i) => {
+        return (
+            <div className='manage-routine' key={i}>
+                <p>{mapExercise.exercise_name}</p>
+                <button>Delete</button>
+            </div>
+        )
+    })
 
     return (
-        <p>Is stored in the balls</p>
+        <>
+            {manageExercises}
+        </>
     )
 }

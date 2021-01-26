@@ -6,7 +6,7 @@ export default function GenerateWorkoutsPage(props) {
         return (
             <Options key={i}
                 id={mapRoutine.id}
-                name={mapRoutine.name} />
+                name={mapRoutine.routine_name} />
         )
     });
 
