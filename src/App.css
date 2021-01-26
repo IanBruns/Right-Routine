@@ -8,8 +8,22 @@ h1, h2 {
     text-align: center;
 }
 
-input, select, textarea{
-    color: #ff0000;
+input {
+    background-color: grey;
+    color: white;
+}
+
+form {
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
 }
 
 a:link    { color: grey  }
@@ -52,5 +66,9 @@ a:active  { color: red  }
     .box {
         margin-left: 25%;
         margin-right: 25%;
+    }
+
+    form {
+        width: 50%;
     }
 }
