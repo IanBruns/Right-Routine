@@ -8,15 +8,21 @@ h1, h2 {
     text-align: center;
 }
 
+input, select, textarea{
+    color: #ff0000;
+}
+
 .box {
-    /* height: 100px; */
     padding: 50px;
     border: 1px solid red;
-    margin: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
 }
 
 @media all and (min-width: 800px) {
-    /*
-    Desktop defaults in more rows, where mobile is all columns
-    */
+    .box {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
 }
