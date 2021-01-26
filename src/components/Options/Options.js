@@ -5,6 +5,7 @@ export default function Options(props) {
     return (
         <div className='box'>
             {props.name}
+            <br />
             <Link to={`/workout/${props.id}`}>
                 <button className='myButton'>
                     Workout
@@ -16,6 +17,10 @@ export default function Options(props) {
                     Manage
                 </button>
             </Link>
+            <br />
+            <button className='myButton'>
+                Delete Routine
+            </button>
         </div>
     )
 }

@@ -7,10 +7,8 @@ export default function GenerateWorkoutsPage(props) {
             <>
                 <Options key={i}
                     id={mapRoutine.id}
-                    name={mapRoutine.routine_name} />
-                <button className='myButton'>
-                    Delete Routine
-                </button>
+                    name={mapRoutine.routine_name}>
+                </Options>
             </>
         )
     });
