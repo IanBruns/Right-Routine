@@ -86,6 +86,20 @@ const RoutinesApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : undefined
             )
+    },
+    deleteRoutine(routine_id) {
+        return fetch(`${config.API_ENDPOINT}/routines/${routine_id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : undefined
+            )
     }
 }
 

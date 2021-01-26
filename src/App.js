@@ -45,8 +45,8 @@ function App() {
     setRoutines(addRoutines);
   }
 
-  function removeRoutine(id) {
-    console.log(id);
+  function removeRoutine(routine_id) {
+    console.log(routine_id);
   }
 
   return (
