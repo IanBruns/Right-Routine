@@ -1,28 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Options from '../../components/Options/Options';
 
 export default function GenerateWorkoutsPage(props) {
     const selectExercise = props.routines.map((mapRoutine, i) => {
         return (
-            <div className='box' key={i}>
-                {mapRoutine.routine_name}
-                <br />
-
-                <Link to={`/workout/${mapRoutine.id}`}>
-                    <button className='myButton'>
-                        Select
-                </button>
-                </Link>
-                <br />
-                <Link to={`/manage/${mapRoutine.id}`}>
-                    <button className='myButton'>
-                        Manage Exercises
-                </button>
-                </Link>
-                <button className='myButton'>
-                    Delete Routine
-                </button>
-            </div>
+            <Options key={i}
+                id={mapRoutine.id}
+                name={mapRoutine.name} />
         )
     });
 
