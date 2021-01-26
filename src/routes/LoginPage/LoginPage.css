@@ -8,7 +8,7 @@
     padding: 15px;
 }
 
-.myButton {
+/* .myButton {
 	box-shadow: 3px 4px 0px 0px #ff0000;
 	background:linear-gradient(to bottom, #000000 5%, #8a8a8a 100%);
 	background-color:#000000;
@@ -34,7 +34,7 @@
 a:link    { color: grey  }
 a:visited { color: grey   }
 a:hover   { color: red }
-a:active  { color: red  }
+a:active  { color: red  } */
 
 @media all and (min-width: 800px) {
     /*
