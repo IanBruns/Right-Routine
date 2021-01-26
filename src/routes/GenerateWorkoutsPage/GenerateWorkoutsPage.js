@@ -2,16 +2,18 @@ import React from 'react';
 import Options from '../../components/Options/Options';
 
 export default function GenerateWorkoutsPage(props) {
-    const selectExercise = props.routines.map((mapRoutine, i) => {
+    const selectExercise = props.routines.map((mapRoutine) => {
         return (
-            <>
-                <Options key={i}
-                    id={mapRoutine.id}
-                    name={mapRoutine.routine_name}>
-                </Options>
-            </>
+            <Options key={mapRoutine.id}
+                id={mapRoutine.id}
+                name={mapRoutine.routine_name}
+                removeRoutine={removeRoutine} />
         )
     });
+
+    function removeRoutine(id) {
+        console.log('test');
+    }
 
     return (
         <div className='GenerateWorkoutsPage'>
