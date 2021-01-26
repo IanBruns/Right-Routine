@@ -72,6 +72,20 @@ const RoutinesApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
             )
+    },
+    deleteExercise(routine_id, exercise_id) {
+        return fetch(`${config.API_ENDPOINT}/routines/${routine_id}/exercises/${exercise_id}`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
     }
 }
 
