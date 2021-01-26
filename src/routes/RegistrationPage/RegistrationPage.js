@@ -56,7 +56,7 @@ export default function RegistrationPage(props) {
                 <br />
 
                 <p>
-                    Already have an account?
+                    Already have an account? <br />
                     <Link to={'/login'}>Sign in</Link>
                 </p>
 
