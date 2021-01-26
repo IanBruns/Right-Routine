@@ -11,11 +11,12 @@ export default function ManageRoutesExercisesPage(props) {
     }, [props.match.params.routine_id]);
 
     function handleDeleteClicked(exercise_id) {
-        const newExercises = manageExercises.filter(exercise => exercise_id === props.match.params.routine_id)
+        const newExercises = exercises.filter(exercise =>
+            exercise.id !== exercise_id)
 
         RoutinesApiService.deleteExercise(props.match.params.routine_id, exercise_id)
             .then(() => {
-                manageExercises = newExercises;
+                setExercises(newExercises);
             })
             .catch(err => {
                 console.log(err);
