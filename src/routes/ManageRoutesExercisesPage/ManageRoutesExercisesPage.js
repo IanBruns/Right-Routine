@@ -10,11 +10,18 @@ export default function ManageRoutesExercisesPage(props) {
             })
     }, [props.match.params.routine_id]);
 
+    function handleDeleteClicked() {
+        console.log('test');
+    }
+
     const manageExercises = exercises.map((mapExercise, i) => {
         return (
             <div className='manage-routine' key={i}>
                 <p>{mapExercise.exercise_name}</p>
-                <button>Delete</button>
+                <button
+                    onClick={handleDeleteClicked}>
+                    Delete
+                </button>
             </div>
         )
     })

@@ -4,9 +4,14 @@ import Options from '../../components/Options/Options';
 export default function GenerateWorkoutsPage(props) {
     const selectExercise = props.routines.map((mapRoutine, i) => {
         return (
-            <Options key={i}
-                id={mapRoutine.id}
-                name={mapRoutine.routine_name} />
+            <>
+                <Options key={i}
+                    id={mapRoutine.id}
+                    name={mapRoutine.routine_name} />
+                <button className='myButton'>
+                    Delete Routine
+                </button>
+            </>
         )
     });
 
