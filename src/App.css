@@ -17,7 +17,6 @@ form {
     text-align: center;
     margin: auto;
     border: 1px solid red;
-    padding: 5px;
 }
 
 ::placeholder {
