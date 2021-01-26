@@ -45,7 +45,7 @@ export default function LoginPage(props) {
                 <div className='form-options'>
                     <label htmlFor='user_name'>Username</label>
                     <br />
-                    <input type='text' placeholder='enter Username' name='user_name' required />
+                    <input type='text' placeholder='Enter Username' name='user_name' required />
                 </div>
                 <div className='form-options'>
                     <label htmlFor="password">Password</label>
