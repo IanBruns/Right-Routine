@@ -10,21 +10,30 @@ export default function ManageRoutesExercisesPage(props) {
             })
     }, [props.match.params.routine_id]);
 
-    function handleDeleteClicked() {
-        console.log('test');
+    function handleDeleteClicked(exercise_id) {
+        const newExercises = manageExercises.filter(exercise => exercise_id === props.match.params.routine_id)
+
+        RoutinesApiService.deleteExercise(props.match.params.routine_id, exercise_id)
+            .then(() => {
+                manageExercises = newExercises;
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
-    const manageExercises = exercises.map((mapExercise, i) => {
+    let manageExercises = exercises.map((mapExercise, i) => {
         return (
             <div className='manage-routine' key={i}>
                 <p>{mapExercise.exercise_name}</p>
                 <button
-                    onClick={handleDeleteClicked}>
+                    onClick={() => handleDeleteClicked(mapExercise.id)}>
                     Delete
                 </button>
             </div>
         )
     })
+    manageExercises.sort();
 
     return (
         <>

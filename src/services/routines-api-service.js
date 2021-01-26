@@ -75,7 +75,7 @@ const RoutinesApiService = {
     },
     deleteExercise(routine_id, exercise_id) {
         return fetch(`${config.API_ENDPOINT}/routines/${routine_id}/exercises/${exercise_id}`, {
-            method: 'POST',
+            method: 'DELETE',
             headers: {
                 'content-type': 'application/json',
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
