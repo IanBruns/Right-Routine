@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RoutinesApiService from '../../services/routines-api-service';
 
-export default function ManageRoutesExercisesPage(props) {
+export default function ManageRoutinesExercisesPage(props) {
     const [exercises, setExercises] = useState([]);
     useEffect(() => {
         RoutinesApiService.getRoutineExercises(props.match.params.routine_id)
