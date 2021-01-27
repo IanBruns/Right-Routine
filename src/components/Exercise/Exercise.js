@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Exercise.css';
 
 export default function Exercise(props) {
     const [hidden, setHidden] = useState(true);
