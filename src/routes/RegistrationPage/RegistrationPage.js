@@ -44,6 +44,8 @@ export default function RegistrationPage(props) {
                         value={password} onChange={e => setPassword(e.target.value)} />
                 </div>
 
+                <br />
+
                 <button type="submit" className='myButton'
                     disabled={
                         !(user_name.length > 0) ||

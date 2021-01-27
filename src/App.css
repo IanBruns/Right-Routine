@@ -18,6 +18,7 @@ form {
     margin: auto;
     border: 1px solid red;
     width: 90%;
+    padding: 5px;
 }
 
 ::placeholder {

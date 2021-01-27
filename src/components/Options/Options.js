@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Options.css';
 
 export default function Options(props) {
     return (
@@ -7,13 +8,13 @@ export default function Options(props) {
             {props.name}
             <br />
             <Link to={`/workout/${props.id}`}>
-                <button className='myButton'>
+                <button className='myButton options-button'>
                     Workout
                 </button>
             </Link>
             <br />
             <Link to={`/manage/${props.id}`}>
-                <button className='myButton'>
+                <button className='myButton options-button'>
                     Manage
                 </button>
             </Link>
