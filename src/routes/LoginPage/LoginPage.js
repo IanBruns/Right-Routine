@@ -54,11 +54,11 @@ export default function LoginPage(props) {
                 <br />
                 <button type="submit" className='myButton'>Log in</button>
                 <br />
-            </form>
-            <p>
-                Don't have an account?
+                <p>
+                    Don't have an account? <br />
                     <Link to='/register'>Sign up</Link>
-            </p>
+                </p>
+            </form>
         </div>
     )
 }

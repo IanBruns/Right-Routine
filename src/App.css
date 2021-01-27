@@ -17,6 +17,7 @@ form {
     text-align: center;
     margin: auto;
     border: 1px solid red;
+    width: 90%;
 }
 
 ::placeholder {
@@ -24,8 +25,13 @@ form {
     opacity: 1;
 }
 
-a:link    { color: grey  }
-a:visited { color: grey   }
+a:link    { 
+    text-decoration: none;
+    color: white;
+}
+a:visited { text-decoration: none; 
+    color: white
+}
 a:hover   { color: red }
 a:active  { color: red  }
 
