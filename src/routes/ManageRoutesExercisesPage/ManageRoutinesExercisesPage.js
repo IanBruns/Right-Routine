@@ -7,7 +7,7 @@ export default function ManageRoutinesExercisesPage(props) {
     useEffect(() => {
         RoutinesApiService.getRoutineExercises(props.match.params.routine_id)
             .then(res => {
-                setExercises(res);
+                setExercises(res.sort());
             })
     }, [props.match.params.routine_id]);
 
@@ -35,7 +35,6 @@ export default function ManageRoutinesExercisesPage(props) {
             </div>
         )
     })
-    manageExercises.sort();
 
     return (
         <div>
