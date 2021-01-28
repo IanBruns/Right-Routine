@@ -20,7 +20,7 @@ export default function Options(props) {
             </Link>
             <br />
             <button className='myButton'
-                onClick={() => props.removeRoutine(props.id)}>
+                onClick={() => { if (window.confirm('Are you sure you wish to delete this item?')) props.removeRoutine(props.id) }}>
                 Delete Routine
             </button>
         </div>

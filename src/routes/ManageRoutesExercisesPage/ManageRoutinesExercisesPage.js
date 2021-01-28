@@ -29,7 +29,7 @@ export default function ManageRoutinesExercisesPage(props) {
             <div className='manage-routine box' key={mapExercise.id}>
                 <p>{mapExercise.exercise_name}</p>
                 <button className='myButton'
-                    onClick={() => handleDeleteClicked(mapExercise.id)}>
+                    onClick={() => { if (window.confirm('Are you sure you wish to delete this item?')) handleDeleteClicked(mapExercise.id) }}>
                     Delete
                 </button>
             </div>
