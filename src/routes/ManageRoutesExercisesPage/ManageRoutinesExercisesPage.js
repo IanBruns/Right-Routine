@@ -27,7 +27,7 @@ export default function ManageRoutinesExercisesPage(props) {
         return (
             <div className='manage-routine' key={mapExercise.id}>
                 <p>{mapExercise.exercise_name}</p>
-                <button
+                <button className='myButton'
                     onClick={() => handleDeleteClicked(mapExercise.id)}>
                     Delete
                 </button>
@@ -37,8 +37,8 @@ export default function ManageRoutinesExercisesPage(props) {
     manageExercises.sort();
 
     return (
-        <>
+        <div>
             {manageExercises}
-        </>
+        </div>
     )
 }
