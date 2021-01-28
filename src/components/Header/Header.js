@@ -12,7 +12,7 @@ function Header(props) {
     function renderLogoutLink() {
         return (
             <div className='Header__logged-in'>
-                <Link
+                <Link className='center'
                     onClick={handleLogoutClick}
                     to='/'>
                     Logout
