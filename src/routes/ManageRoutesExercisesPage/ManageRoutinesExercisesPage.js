@@ -7,7 +7,8 @@ export default function ManageRoutinesExercisesPage(props) {
     useEffect(() => {
         RoutinesApiService.getRoutineExercises(props.match.params.routine_id)
             .then(res => {
-                setExercises(res.sort());
+                res.sort((a, b) => (a.exercise_name > b.exercise_name) ? 1 : -1);
+                setExercises(res);
             })
     }, [props.match.params.routine_id]);
 
@@ -47,6 +48,7 @@ export default function ManageRoutinesExercisesPage(props) {
 
     return (
         <div>
+            <h2>Manage your exercises</h2>
             {manageExercises.length > 0
                 ? manageExercises
                 : noExercises}
