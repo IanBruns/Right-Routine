@@ -31,7 +31,7 @@ export default function AssignedWorkoutPage(props) {
     return (
         <div className='AssignedWorkoutPage'>
             <h2>Today's workout</h2>
-            <button className='myButton'
+            <button className='myButton addAnother'
                 onClick={() => setTotalExercises(totalExercises + 1)}>
                 Add Another
             </button>
