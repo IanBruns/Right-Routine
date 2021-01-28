@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import RoutinesApiService from '../../services/routines-api-service';
+import './ManageRoutinesExercisePage.css';
 
 export default function ManageRoutinesExercisesPage(props) {
     const [exercises, setExercises] = useState([]);
@@ -25,7 +26,7 @@ export default function ManageRoutinesExercisesPage(props) {
 
     let manageExercises = exercises.map((mapExercise) => {
         return (
-            <div className='manage-routine' key={mapExercise.id}>
+            <div className='manage-routine box' key={mapExercise.id}>
                 <p>{mapExercise.exercise_name}</p>
                 <button className='myButton'
                     onClick={() => handleDeleteClicked(mapExercise.id)}>
