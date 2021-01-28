@@ -36,9 +36,20 @@ export default function ManageRoutinesExercisesPage(props) {
         )
     })
 
+    const noExercises = (
+        <div className='box'>
+            <p>
+                Oh no!  It looks as if you have no exercises, return to home and
+                add a few exercises
+            </p>
+        </div>
+    )
+
     return (
         <div>
-            {manageExercises}
+            {manageExercises.length > 0
+                ? manageExercises
+                : noExercises}
         </div>
     )
 }
