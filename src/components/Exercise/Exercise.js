@@ -7,7 +7,7 @@ export default function Exercise(props) {
     return (
         <div className="exercise box"
             onClick={() => setHidden(!hidden)}>
-            <p>{`3 sets of ${props.name}('s)`}</p>
+            <p className='set-name'>{`3 sets of ${props.name}('s)`}</p>
             <p>{(!hidden && props.description)}</p>
         </div>
     )
