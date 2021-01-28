@@ -112,6 +112,12 @@ function App() {
           />
         </Switch>
       </main>
+
+      <footer>
+        <p>
+          Made by Ian Bruns
+        </p>
+      </footer>
     </div>
   );
 }
