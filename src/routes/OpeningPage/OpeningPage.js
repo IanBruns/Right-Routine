@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './OpeningPage.css'
 
 export default function OpeningPage(props) {
     return (
@@ -32,7 +33,7 @@ export default function OpeningPage(props) {
                     You can add, but you can't subtract (come on)
                 </p>
             </div>
-            <div className='box'>
+            <div className='box centered'>
                 <h3>Now go get gains</h3>
                 <Link
                     to='/register'
@@ -44,6 +45,11 @@ export default function OpeningPage(props) {
                 >
                     <h3>Sign in</h3>
                 </Link>
+                <p>
+                    I do have a dummy account, please be nice to it (all lowercase)
+                </p>
+                <p>Username: test_man</p>
+                <p>password: password</p>
             </div>
         </div>
     )
