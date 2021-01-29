@@ -14,6 +14,10 @@ export default function HomePage(props) {
                         can generate a workout where it will randomize and select 4
                         exercises for you
                     </p>
+                    <p>
+                        If you want to add a description you can (not required), it will be hidden
+                        in your workout until you click on the routine
+                    </p>
                 </div>
                 <div className='box'>
                     <p>Generate Workout</p>
