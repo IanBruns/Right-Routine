@@ -16,18 +16,23 @@ export default function AddRoutinesPage(props) {
     }
 
     return (
-        <div className='box'>
+        <div className='AddRoutinesPage'>
             <form className='add-routine-form' onSubmit={e => handleSubmit(e)}>
                 <label htmlFor='routine_name'>Routine Name</label>
                 <br />
                 <input type='text' placeholder='Enter Exercise Name' name='routine_name'
                     value={routine_name} onChange={e => setRoutine_name(e.target.value)} />
-
-                <button className='myButton' type='submit'
+                <br />
+                <button className='myButton button-submit' type='submit'
                     disabled={
                         !(routine_name.length > 0)
                     }>
                     Submit
+                </button>
+                <br />
+                <button className='myButton'
+                    onClick={props.history.goBack}>
+                    Back
                 </button>
             </form>
         </div>
