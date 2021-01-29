@@ -4,7 +4,6 @@ import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 
 export default function LoginPage(props) {
-    const [error, setError] = useState(null);
 
     function onLoginSuccess() {
         props.whenLoggedIn();
@@ -16,7 +15,6 @@ export default function LoginPage(props) {
 
     function handleSubmitJwtAuth(e) {
         e.preventDefault();
-        setError(null);
         const { user_name, password } = e.target;
 
         AuthApiService.postLogin({
@@ -30,8 +28,7 @@ export default function LoginPage(props) {
                 onLoginSuccess();
             })
             .catch(res => {
-                setError({ error: res.error })
-                alert(error);
+                alert(res.error);
             })
     }
 
