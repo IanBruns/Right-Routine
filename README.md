@@ -17,3 +17,8 @@ Right-Routine API: https://github.com/IanBruns/right-routine-server
 ## Technology used
 
 Client end: React (with React Hooks)
+
+## Contact info
+
+For any suggestions, questions, or job opportunities (hint), please feel free to 
+contact me at ian@rbruns.com
