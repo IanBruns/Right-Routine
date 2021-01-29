@@ -13,6 +13,10 @@ input {
     color: white;
 }
 
+footer {
+    font-size: 13px;
+}
+
 form {
     text-align: center;
     margin: auto;
