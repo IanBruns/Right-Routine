@@ -1,8 +1,10 @@
 # RIGHT ROUTINE
 
-https://right-routine.ianbruns.vercel.app/
+https://right-routine.vercel.app/
 
 ## Screenshots
+
+![Workout-list](.\src\images\exercises.png)
 
 ## SUMMARY
 
