@@ -38,7 +38,7 @@ function Header(props) {
 
     return (
         <nav className='Header'>
-            <Link to='/'>
+            <Link to='/home'>
                 <h1>Right Routine</h1>
             </Link>
             {TokenService.hasAuthToken()
