@@ -35,6 +35,10 @@ export default function AssignedWorkoutPage(props) {
                 onClick={() => setTotalExercises(totalExercises + 1)}>
                 Add Another
             </button>
+            <button className='myButton addAnother'
+                onClick={props.history.goBack}>
+                Back
+            </button>
             {generateAssignedExercises(totalExercises)}
         </div>
     )
