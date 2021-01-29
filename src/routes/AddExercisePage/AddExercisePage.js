@@ -56,14 +56,18 @@ export default function AddExercisePage(props) {
                     </select>
                 </div>
 
-                <button className='myButton' type='submit'
+                <button className='myButton button-submit' type='submit'
                     disabled={
                         !(exercise_name.length > 0) ||
                         !(assigned_routine.length > 0)
                     }>
                     Submit
                 </button>
-
+                <br />
+                <button className='myButton'
+                    onClick={props.history.goBack}>
+                    Back
+                </button>
             </form>
         </div>
     )
