@@ -4,7 +4,11 @@ https://right-routine.vercel.app/
 
 ## Screenshots
 
+![Homepage](/src/images/home.png)
+
 ![Workout-list](/src/images/exercises.png)
+
+![Manage-Workouts](/src/images/manage.png)
 
 ## SUMMARY
 
