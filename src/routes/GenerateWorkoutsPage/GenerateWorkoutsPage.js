@@ -1,5 +1,6 @@
 import React from 'react';
 import Options from '../../components/Options/Options';
+import './GenerateWorkoutsPage.css'
 
 export default function GenerateWorkoutsPage(props) {
     const selectExercise = props.routines.map((mapRoutine) => {
@@ -14,6 +15,11 @@ export default function GenerateWorkoutsPage(props) {
     return (
         <div className='GenerateWorkoutsPage'>
             <h2>What workout would you like to do today</h2>
+            <button className='myButton back-button'
+                onClick={props.history.goBack}>
+                Back
+            </button>
+            <br />
             {selectExercise}
         </div>
     )
