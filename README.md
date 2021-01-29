@@ -1,4 +1,4 @@
-### RIGHT ROUTINE ###
+# RIGHT ROUTINE
 
 https://right-routine.ianbruns.vercel.app/
 
