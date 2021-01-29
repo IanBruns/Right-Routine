@@ -4,7 +4,7 @@ https://right-routine.vercel.app/
 
 ## Screenshots
 
-![Workout-list](.\src\images\exercises.png)
+![Workout-list](/src/images/exercises.png)
 
 ## SUMMARY
 
