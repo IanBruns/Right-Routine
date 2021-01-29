@@ -2,6 +2,8 @@
 
 https://right-routine.ianbruns.vercel.app/
 
+## Screenshots
+
 ## SUMMARY
 
 This is a client for the Right-Routine API, which randomizes and outputs
@@ -14,4 +16,3 @@ Right-Routine API: https://github.com/IanBruns/right-routine-server
 ## Technology used
 
 Client end: React (with React Hooks)
-
