@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RoutinesApiService from '../../services/routines-api-service';
+import './AddExercisePage.css'
 
 export default function AddExercisePage(props) {
     const [exercise_name, setExercise_name] = useState('');
@@ -64,7 +65,6 @@ export default function AddExercisePage(props) {
                 </button>
 
             </form>
-            <button className='myButton'>Back</button>
         </div>
     )
 }
