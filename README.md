@@ -16,7 +16,7 @@ Right-Routine API: https://github.com/IanBruns/right-routine-server
 
 ## Technology used
 
-Client end: React (with React Hooks)
+Client end: React (with React Hooks) initialzed with the create-react-app node package
 
 ## Contact info
 
