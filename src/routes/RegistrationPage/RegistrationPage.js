@@ -48,9 +48,7 @@ export default function RegistrationPage(props) {
                 <br />
 
                 <div className='box pass-requirements'>
-                    <p>
-                        Password must:
-                </p>
+                    <p>Password must:</p>
                     <ul>
                         <li>Be at least 8 characters</li>
                         <li>Contain no spaces</li>
