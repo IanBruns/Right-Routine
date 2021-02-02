@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AuthApiService from '../../services/auth-api-service';
+import './RegistrationPage.css'
 
 export default function RegistrationPage(props) {
     const [user_name, setUser_name] = useState('');
@@ -46,7 +47,7 @@ export default function RegistrationPage(props) {
 
                 <br />
 
-                <div className='box'>
+                <div className='box pass-requirements'>
                     <p>
                         Password must:
                 </p>
