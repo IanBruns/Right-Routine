@@ -28,6 +28,7 @@ function Header(props) {
                     to='/register'>
                     Register
                 </Link>
+                <br />
                 <Link
                     to='/login'>
                     Log in
