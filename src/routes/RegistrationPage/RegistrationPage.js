@@ -46,6 +46,17 @@ export default function RegistrationPage(props) {
 
                 <br />
 
+                <div className='box'>
+                    <p>
+                        Password must:
+                </p>
+                    <ul>
+                        <li>Be at least 8 characters</li>
+                        <li>Contain no spaces</li>
+                        <li>Contain a number and special character</li>
+                    </ul>
+                </div>
+
                 <button type="submit" className='myButton'
                     disabled={
                         !(user_name.length > 0) ||
