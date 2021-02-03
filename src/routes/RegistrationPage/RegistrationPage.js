@@ -6,9 +6,12 @@ import './RegistrationPage.css'
 export default function RegistrationPage(props) {
     const [user_name, setUser_name] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState(null);
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        setErrorMessage(null);
 
         AuthApiService.postUser({ user_name, password })
             .then(() => {
@@ -20,7 +23,7 @@ export default function RegistrationPage(props) {
                 history.push(destination);
             })
             .catch(err => {
-                alert(err.error);
+                setErrorMessage(err.error)
             })
     }
 
@@ -28,7 +31,6 @@ export default function RegistrationPage(props) {
         <div className='RegistrationPage'>
 
             <h2>Register</h2>
-
             <form className='sign-up-form' onSubmit={e => handleSubmit(e)}>
 
                 <div className='form-options'>
@@ -44,6 +46,10 @@ export default function RegistrationPage(props) {
                     <input type="password" placeholder="Enter Password" name="password" required
                         value={password} onChange={e => setPassword(e.target.value)} />
                 </div>
+
+                <br />
+
+                <p>{errorMessage}</p>
 
                 <br />
 
