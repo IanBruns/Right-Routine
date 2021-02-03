@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 
 export default function LoginPage(props) {
+    const [loading, setLoading] = useState(null);
 
     function onLoginSuccess() {
         props.whenLoggedIn();
@@ -17,6 +18,8 @@ export default function LoginPage(props) {
         e.preventDefault();
         const { user_name, password } = e.target;
 
+        setLoading(true);
+
         AuthApiService.postLogin({
             user_name: user_name.value,
             password: password.value
@@ -25,9 +28,11 @@ export default function LoginPage(props) {
                 user_name.value = '';
                 password.value = '';
                 TokenService.saveAuthToken(res.authToken);
+                setLoading(false);
                 onLoginSuccess();
             })
             .catch(res => {
+                setLoading(false);
                 alert(res.error);
             })
     }
@@ -49,7 +54,12 @@ export default function LoginPage(props) {
                     <input type="password" placeholder="Enter Password" name="password" required />
                 </div>
                 <br />
-                <button type="submit" className='myButton'>Log in</button>
+                <button type="submit" className='myButton'
+                    disabled={loading}>
+                    {loading
+                        ? 'loading'
+                        : 'login'}
+                </button>
                 <br />
                 <p>
                     Don't have an account? <br />
